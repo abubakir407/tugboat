@@ -1,13 +1,7 @@
-from telebot import types
+import telebot
 
-
-# Кнопка для отправки номера
 def num_button():
-    # Создаем пространство
-    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    # Создаем сами кнопки
-    num = types.KeyboardButton('Отправить номер📞', request_contact=True)
-    # Добавляем кнопки в пространство
-    kb.add(num)
-
-    return kb
+    markup = telebot.types.ReplyKeyboardMarkup(one_time_keyboard=True)
+    button = telebot.types.KeyboardButton('Отправить контакт', request_contact=True)
+    markup.add(button)
+    return markup

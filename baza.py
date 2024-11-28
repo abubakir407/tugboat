@@ -29,6 +29,4 @@ def register(tg_id, name, num):
 
 
 
-
-
 connection.commit()
